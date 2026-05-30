@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WowoClean Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>WowoClean Pro</h1>
+
+    <div class="card">
+
+        <h2>Login</h2>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+
+        <button onclick="login()">
+            Login
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>User Information</h2>
+
+        <div id="userInfo">
+            Belum login
+        </div>
+
+    </div>
+
+    <div
+        class="card"
+        id="addContainerSection">
+
+        <h2>Tambah Container</h2>
+
+        <input
+            type="text"
+            id="container_id"
+            placeholder="Container ID">
+
+        <input
+            type="text"
+            id="waste_type"
+            placeholder="Waste Type">
+
+        <input
+            type="number"
+            id="weight_kg"
+            placeholder="Weight (kg)">
+
+        <button onclick="addContainer()">
+            Tambah Container
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Container Data</h2>
+
+        <button onclick="getContainers()">
+            Refresh Data
+        </button>
+
+        <div id="result">
+            Belum ada data
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
